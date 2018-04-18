@@ -1,0 +1,9 @@
+names,showtimes
+The Death of Stalin,"{'days': 'Wed - Thu', 'time': '3:10 PM, 5:20, 7:30, 9:40 PM', 'date': '4/18 - 4/19'}"
+Isle of Dogs,"{'days': 'Wed - Thu', 'time': '3:00 PM, 4:10, 5:10, 7:20, 8:30, 9:30, 10:35 PM', 'date': '4/18 - 4/19'}"
+The Leisure Seeker,"{'days': 'Wed - Thu', 'time': '1:50 PM, 6:15 PM', 'date': '4/18 - 4/19'}"
+Ready Player One,"{'days': 'Wed - Thu', 'time': '1:30 PM, 4:15, 7:00, 9:45 PM', 'date': '4/18 - 4/19'}"
+Final Portrait,"{'days': 'Fri, Mon - Thu', 'time': '1:30 PM, 3:30, 5:30, 7:30, 9:25 PM', 'date': '4/20, 4/23 - 4/26'}"
+You Were Never Really Here,"{'days': 'Fri, Mon - Thu', 'time': '2:15 PM, 4:10, 6:05, 8:00, 9:55 PM', 'date': '4/20, 4/23 - 4/26'}"
+Avengers: Infinity War,"{'days': 'Thu', 'time': '7:00 PM, 10:00 PM', 'date': '4/26'}"
+Deadpool 2,"{'days': 'Thu', 'time': '7:20 PM, 9:30 PM', 'date': '5/17'}"

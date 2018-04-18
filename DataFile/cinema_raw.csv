@@ -1,0 +1,213 @@
+names,showtimes
+"<div class=""ns-item "" id=""movie_0"">
+<a href=""/movie?id=252571"">
+<div class=""poster"">
+<img alt=""The Death of Stalin"" src=""http://www.movienewsletters.net/photos/252571H1.jpg""/>
+<div class=""triangle""><p>1</p></div>
+</div>
+</a>
+<h2>The Death of Stalin</h2>
+<div class=""ns-rating""></div>
+<a href=""/movie?id=252571"">More Info</a>
+<a href=""/movie?id=252571&amp;trailer=true"">Watch Trailer</a>
+</div>","<div class=""ns-showtime "" id=""time_0"">
+<div>
+<p class=""ns-date"">4/18 - 4/19</p>
+<p class=""ns-days"">Wed - Thu</p>
+<p class=""ns-time"">3:10 PM, 5:20, 7:30, 9:40 PM</p>
+<p class=""ns-comment""></p>
+</div>
+<div>
+<p class=""ns-date"">4/20, 4/23 - 4/25</p>
+<p class=""ns-days"">Fri, Mon - Wed</p>
+<p class=""ns-time"">4:45 PM, 7:00 PM</p>
+<p class=""ns-comment""></p>
+</div>
+<div>
+<p class=""ns-date"">4/21 - 4/22</p>
+<p class=""ns-days"">Sat - Sun</p>
+<p class=""ns-time"">11:50 AM, 4:45, 7:00 PM</p>
+<p class=""ns-comment""></p>
+</div>
+</div>"
+"<div class=""ns-item ns-last"" id=""movie_1"">
+<a href=""/movie?id=244036"">
+<div class=""poster"">
+<img alt=""Isle of Dogs"" src=""http://www.movienewsletters.net/photos/244036H1.jpg""/>
+<div class=""triangle""><p>2</p></div>
+</div>
+</a>
+<h2>Isle of Dogs</h2>
+<div class=""ns-rating""></div>
+<a href=""/movie?id=244036"">More Info</a>
+<a href=""/movie?id=244036&amp;trailer=true"">Watch Trailer</a>
+</div>","<div class=""ns-showtime ns-last"" id=""time_1"">
+<div>
+<p class=""ns-date"">4/18 - 4/19</p>
+<p class=""ns-days"">Wed - Thu</p>
+<p class=""ns-time"">3:00 PM, 4:10, 5:10, 7:20, 8:30, 9:30, 10:35 PM</p>
+<p class=""ns-comment""></p>
+</div>
+<div>
+<p class=""ns-date"">4/20, 4/23 - 4/26</p>
+<p class=""ns-days"">Fri, Mon - Thu</p>
+<p class=""ns-time"">3:00 PM, 5:10, 7:20, 9:30 PM</p>
+<p class=""ns-comment""></p>
+</div>
+<div>
+<p class=""ns-date"">4/21 - 4/22</p>
+<p class=""ns-days"">Sat - Sun</p>
+<p class=""ns-time"">12:50 PM, 3:00, 5:10, 7:20, 9:30 PM</p>
+<p class=""ns-comment""></p>
+</div>
+</div>"
+"<div class=""ns-item ns-last"" id=""movie_2"">
+<a href=""/movie?id=243557"">
+<div class=""poster"">
+<img alt=""The Leisure Seeker"" src=""http://www.movienewsletters.net/photos/243557H1.jpg""/>
+<div class=""triangle""><p>3</p></div>
+</div>
+</a>
+<h2>The Leisure Seeker</h2>
+<div class=""ns-rating""></div>
+<a href=""/movie?id=243557"">More Info</a>
+<a href=""/movie?id=243557&amp;trailer=true"">Watch Trailer</a>
+</div>","<div class=""ns-showtime ns-last"" id=""time_2"">
+<div>
+<p class=""ns-date"">4/18 - 4/19</p>
+<p class=""ns-days"">Wed - Thu</p>
+<p class=""ns-time"">1:50 PM, 6:15 PM</p>
+<p class=""ns-comment""></p>
+</div>
+</div>"
+"<div class=""ns-item "" id=""movie_3"">
+<a href=""/movie?id=215356"">
+<div class=""poster"">
+<img alt=""Ready Player One"" src=""http://www.movienewsletters.net/photos/215356H1.jpg""/>
+<div class=""triangle""><p>4</p></div>
+</div>
+</a>
+<h2>Ready Player One</h2>
+<div class=""ns-rating""></div>
+<a href=""/movie?id=215356"">More Info</a>
+<a href=""/movie?id=215356&amp;trailer=true"">Watch Trailer</a>
+</div>","<div class=""ns-showtime "" id=""time_3"">
+<div>
+<p class=""ns-date"">4/18 - 4/19</p>
+<p class=""ns-days"">Wed - Thu</p>
+<p class=""ns-time"">1:30 PM, 4:15, 7:00, 9:45 PM</p>
+<p class=""ns-comment""></p>
+</div>
+<div>
+<p class=""ns-date"">4/20 - 4/25</p>
+<p class=""ns-days"">Fri - Wed</p>
+<p class=""ns-time"">2:00 PM, 9:15 PM</p>
+<p class=""ns-comment""></p>
+</div>
+</div>"
+"<div class=""ns-item hidden"" id=""movie_4"">
+<a href=""/movie?id=250718"">
+<div class=""poster"">
+<img alt=""Final Portrait"" src=""http://www.movienewsletters.net/photos/250718H1.jpg""/>
+<div class=""triangle""><p>5</p></div>
+</div>
+</a>
+<h2>Final Portrait</h2>
+<div class=""ns-rating""></div>
+<a href=""/movie?id=250718"">More Info</a>
+<a href=""/movie?id=250718&amp;trailer=true"">Watch Trailer</a>
+</div>","<div class=""ns-showtime hidden"" id=""time_4"">
+<div>
+<p class=""ns-date"">4/20, 4/23 - 4/26</p>
+<p class=""ns-days"">Fri, Mon - Thu</p>
+<p class=""ns-time"">1:30 PM, 3:30, 5:30, 7:30, 9:25 PM</p>
+<p class=""ns-comment""></p>
+</div>
+<div>
+<p class=""ns-date"">4/21 - 4/22</p>
+<p class=""ns-days"">Sat - Sun</p>
+<p class=""ns-time"">11:35 AM, 1:30, 3:30, 5:30, 7:30, 9:25 PM</p>
+<p class=""ns-comment""></p>
+</div>
+</div>"
+"<div class=""ns-item hidden"" id=""movie_5"">
+<a href=""/movie?id=249707"">
+<div class=""poster"">
+<img alt=""You Were Never Really Here"" src=""http://www.movienewsletters.net/photos/249707H1.jpg""/>
+<div class=""triangle""><p>6</p></div>
+</div>
+</a>
+<h2>You Were Never Really Here</h2>
+<div class=""ns-rating""></div>
+<a href=""/movie?id=249707"">More Info</a>
+<a href=""/movie?id=249707&amp;trailer=true"">Watch Trailer</a>
+</div>","<div class=""ns-showtime hidden"" id=""time_5"">
+<div>
+<p class=""ns-date"">4/20, 4/23 - 4/26</p>
+<p class=""ns-days"">Fri, Mon - Thu</p>
+<p class=""ns-time"">2:15 PM, 4:10, 6:05, 8:00, 9:55 PM</p>
+<p class=""ns-comment""></p>
+</div>
+<div>
+<p class=""ns-date"">4/21 - 4/22</p>
+<p class=""ns-days"">Sat - Sun</p>
+<p class=""ns-time"">12:20 PM, 2:15, 4:10, 6:05, 8:00, 9:55 PM</p>
+<p class=""ns-comment""></p>
+</div>
+</div>"
+"<div class=""ns-item hidden"" id=""movie_6"">
+<a href=""/movie?id=198438"">
+<div class=""poster"">
+<img alt=""Avengers: Infinity War"" src=""http://www.movienewsletters.net/photos/198438H1.jpg""/>
+<div class=""triangle""><p>7</p></div>
+</div>
+</a>
+<h2>Avengers: Infinity War</h2>
+<div class=""ns-rating""></div>
+<a href=""/movie?id=198438"">More Info</a>
+<a href=""/movie?id=198438&amp;trailer=true"">Watch Trailer</a>
+</div>","<div class=""ns-showtime hidden"" id=""time_6"">
+<div>
+<p class=""ns-date"">4/26</p>
+<p class=""ns-days"">Thu</p>
+<p class=""ns-time"">7:00 PM, 10:00 PM</p>
+<p class=""ns-comment"">No Passes Accepted Through 5/13/18</p>
+</div>
+<div>
+<p class=""ns-date"">4/27 - 5/3</p>
+<p class=""ns-days"">Fri - Thu</p>
+<p class=""ns-time"">1:00 PM, 4:00, 7:00, 10:00 PM</p>
+<p class=""ns-comment"">No Passes Through 5/13/18</p>
+</div>
+</div>"
+"<div class=""ns-item hidden"" id=""movie_7"">
+<a href=""/movie?id=242900"">
+<div class=""poster"">
+<img alt=""Deadpool 2"" src=""http://www.movienewsletters.net/photos/242900H1.jpg""/>
+<div class=""triangle""><p>8</p></div>
+</div>
+</a>
+<h2>Deadpool 2</h2>
+<div class=""ns-rating""></div>
+<a href=""/movie?id=242900"">More Info</a>
+<a href=""/movie?id=242900&amp;trailer=true"">Watch Trailer</a>
+</div>","<div class=""ns-showtime hidden"" id=""time_7"">
+<div>
+<p class=""ns-date"">5/17</p>
+<p class=""ns-days"">Thu</p>
+<p class=""ns-time"">7:20 PM, 9:30 PM</p>
+<p class=""ns-comment""></p>
+</div>
+<div>
+<p class=""ns-date"">5/18, 5/21 - 5/24</p>
+<p class=""ns-days"">Fri, Mon - Thu</p>
+<p class=""ns-time"">3:00 PM, 5:10, 7:20, 9:30 PM</p>
+<p class=""ns-comment""></p>
+</div>
+<div>
+<p class=""ns-date"">5/19 - 5/20</p>
+<p class=""ns-days"">Sat - Sun</p>
+<p class=""ns-time"">12:50 PM, 3:00, 5:10, 7:20, 9:30 PM</p>
+<p class=""ns-comment""></p>
+</div>
+</div>"

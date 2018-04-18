@@ -1,5 +1,7 @@
 import bs4
 import requests
+import numpy as np
+import csv
 
 # do not modify
 def get_text_from_elements(elements):
@@ -38,19 +40,47 @@ def crawl_movies_and_showtime(soup):
     return movies_names_clean,movies_showtime_clean
 
 
+def save_cinema_raw(soup):
+    # convert to list in order to preserve the order of movies
+    divs_ns_item = list(soup.find_all("div", class_='ns-item'))
+    divs_ns_showtime = list(soup.find_all("div", class_='ns-showtime'))
+
+    contents = []
+    contents.append(['names','showtimes'])
+    num = len(divs_ns_item)
+    for i in range(num):
+        l = []
+        l.append(str(divs_ns_item[i]))
+        l.append(str(divs_ns_showtime[i]))
+        contents.append(l)
+
+    with open("./DataFile/cinema_raw.csv", 'w') as resultFile:
+        wr = csv.writer(resultFile, dialect='excel')
+        wr.writerows(contents)
+
+def save_cinema_clean(names, showtimes):
+    contents = []
+    contents.append(['names', 'showtimes'])
+    num = len(names)
+    for i in range(num):
+        l = []
+        l.append(names[i])
+        l.append(showtimes[i])
+        contents.append(l)
+    with open("./DataFile/cinema_clean.csv", 'w') as resultFile:
+        wr = csv.writer(resultFile, dialect='excel')
+        wr.writerows(contents)
+
+
 def main():
     url = "http://www.manorpgh.com/"
     html = requests.get(url).content
     soup = bs4.BeautifulSoup(html, 'html.parser')
 
+    save_cinema_raw(soup)
+
     movies_names_clean,movies_showtime_clean = crawl_movies_and_showtime(soup)
-
-    print(movies_names_clean)
-    print(movies_showtime_clean)
-
-
-
-
+    save_cinema_clean(movies_names_clean, movies_showtime_clean)
 
 if __name__ == "__main__":
     main()
