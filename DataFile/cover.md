@@ -1,5 +1,7 @@
 For submission on 4/18/2018, we analyze 2 data sources:
+
 (1)The website of a cinema in Pittsburgh with url http://www.manorpgh.com
+
 (2)
 
 The files are:
