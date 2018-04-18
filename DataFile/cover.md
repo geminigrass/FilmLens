@@ -4,9 +4,9 @@
 
 (2)
 
-### The files are:###
+### The files are:
 
-(1)cinema_raw.csv:
+### (1)cinema_raw.csv:
 
   This file contains the raw data crawled from the Manor cinema website. 
   
@@ -21,7 +21,7 @@
   This is why we need to retain information up to the movie ID in each nodes.
   
   
-(2)cinema_clean.csv
+### (2)cinema_clean.csv
 
   This file contains the cleaned data from cinema_raw.csv.
   
