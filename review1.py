@@ -116,7 +116,7 @@ for film_name in film_name_list:
     url_base = url_rotten + film_name + "/reviews/?page="
     reviews_html = get_reviews_from_several_pages(url_base, page_nums, review_type)
     print("type of reviews_html: ",type(reviews_html))
-    txt_file = "film" + str(i) + "_raw" + ".csv"
+    txt_file = "./DataFile/reviews_film" + str(i) + "_raw" + ".csv"
     save_reviews_raw(reviews_html, txt_file)
     # reviews_raw = get_list_of_str(reviews_html)
     # get_txt(reviews_raw, txt_file)
@@ -146,7 +146,7 @@ for film_name in film_name_list:
             reviews_words.remove(word)
 
         # word.translate(None, string.punctuation)
-    txt_file = "film" + str(i) + "_clean" + ".txt"
+    txt_file = "./DataFile/reviews_film" + str(i) + "_clean" + ".txt"
     get_txt(reviews_words, txt_file)
     i = i + 1
 
