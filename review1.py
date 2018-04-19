@@ -8,6 +8,7 @@ import jieba
 # import pynlpir
 import codecs
 import string
+import csv
 
 
 url_rotten = "https://www.rottentomatoes.com/m/"
@@ -82,15 +83,30 @@ def get_txt(reviews_list, txt_file_name):
 
 def list_to_lower(list):
     return [x.lower() for x in list]
+def get_list_of_str(list):
+    return [str(x) for x in list]
 
+def save_reviews_raw(reviews_html, txt_file):
+    # convert to list in order to preserve the order of movies
+    # divs_ns_item = list(soup.find_all("div", class_='ns-item'))
+    # divs_ns_showtime = list(soup.find_all("div", class_='ns-showtime'))
 
-# print(stopwords)
-# print(type(stopwords))
+    contents = []
+    # contents.append(['names','showtimes'])
+    num = len(reviews_html)
+    for i in range(num):
+        l = []
+        l.append(str(reviews_html))
+        # l.append(str(divs_ns_showtime[i]))
+        contents.append(l)
+    with open(txt_file, 'w') as resultFile:
+        wr = csv.writer(resultFile, dialect='excel')
+        wr.writerows(contents)
 
 film_name_list_1 = ["the_death_of_stalin", "isle_of_dogs_2018", "the_leisure_seeker", "ready_player_one"]
 film_name_list_2 = ["final_portrait", "you_were_never_really_here", "avengers_infinity_war", "deadpool_2"]
-# film_name_list = film_name_list_1 + film_name_list_2
-film_name_list = ["the_death_of_stalin"]
+film_name_list = film_name_list_1 + film_name_list_2
+# film_name_list = ["the_death_of_stalin"]
 director_list = [""]
 i = 0
 # list_reviews_html_str = list()
@@ -100,11 +116,13 @@ for film_name in film_name_list:
     url_base = url_rotten + film_name + "/reviews/?page="
     reviews_html = get_reviews_from_several_pages(url_base, page_nums, review_type)
     print("type of reviews_html: ",type(reviews_html))
-    txt_file = "film" + str(i) + "_raw" + ".txt"
-    get_txt(reviews_html, txt_file)
+    txt_file = "film" + str(i) + "_raw" + ".csv"
+    save_reviews_raw(reviews_html, txt_file)
+    # reviews_raw = get_list_of_str(reviews_html)
+    # get_txt(reviews_raw, txt_file)
 
     reviews_text = get_text_from_elements(reviews_html)
-    print("type of reviews_text: ", type(reviews_text))
+    # print("type of reviews_text: ", type(reviews_text))
     # transfer reviews to lower
     reviews_text = list_to_lower(reviews_text)
     # get list of words from sentences in reviews list
@@ -113,7 +131,7 @@ for film_name in film_name_list:
         words = sentence.split()
         reviews_words = reviews_words + words
     # get  reviews of lower words
-    get_txt(reviews_words, txt_file)
+    # get_txt(reviews_words, txt_file)
     reviews_words = [''.join(c for c in s if c not in string.punctuation) for s in reviews_words]
     # delete stop words
     stopwords = []
