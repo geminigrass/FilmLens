@@ -100,15 +100,19 @@ for film_name in film_name_list:
     url_base = url_rotten + film_name + "/reviews/?page="
     reviews_html = get_reviews_from_several_pages(url_base, page_nums, review_type)
     print("type of reviews_html: ",type(reviews_html))
+    txt_file = "film" + str(i) + "_raw" + ".txt"
+    get_txt(reviews_html, txt_file)
+
     reviews_text = get_text_from_elements(reviews_html)
     print("type of reviews_text: ", type(reviews_text))
+    # transfer reviews to lower
     reviews_text = list_to_lower(reviews_text)
-
-    # lower words
+    # get list of words from sentences in reviews list
     reviews_words = []
     for sentence in reviews_text:
         words = sentence.split()
         reviews_words = reviews_words + words
+    # get  reviews of lower words
     get_txt(reviews_words, txt_file)
     reviews_words = [''.join(c for c in s if c not in string.punctuation) for s in reviews_words]
     # delete stop words
@@ -127,13 +131,6 @@ for film_name in film_name_list:
     txt_file = "film" + str(i) + "_clean" + ".txt"
     get_txt(reviews_words, txt_file)
     i = i + 1
-# print(list_reviews_html_str[0], list_reviews_html_str[1])
-
-# print(reviews_text)
-
-# print(type(reviews_text))
-# print(reviews_text[0])
-# print(type(reviews_text[0]))
 
 
 
