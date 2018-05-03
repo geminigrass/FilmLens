@@ -1,10 +1,15 @@
 import pandas as pd
+import sys
+# print(sys.path)
+sys.path.append('/Users/des/Desktop/95880python')
 from FilmLens.demo_names import *
 from FilmLens.review_word_cloud import *
 
 
 
+
 def main():
+
     url = "http://www.manorpgh.com/"
     html = requests.get(url).content
     soup = bs4.BeautifulSoup(html, 'html.parser')
