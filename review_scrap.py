@@ -1,4 +1,5 @@
-import requests, pandas, numpy, matplotlib.pyplot
+import requests
+import pandas, numpy, matplotlib.pyplot
 from bs4 import BeautifulSoup
 import math
 import re
@@ -12,7 +13,9 @@ import csv
 
 
 url_rotten = "https://www.rottentomatoes.com/m/"
-
+film_name_list_1 = ["avengers_infinity_war", "avengers_infinity_war", "the_death_of_stalin", "final_portrait", "isle_of_dogs_2018"]
+film_name_list_2 = ["you_were_never_really_here", "tully_2018", "rbg", "deadpool_2"]
+film_name_list = film_name_list_1 + film_name_list_2
 
 
 # get text from BeautifulSoup selected elements list
@@ -103,9 +106,7 @@ def save_reviews_raw(reviews_html, txt_file):
         wr = csv.writer(resultFile, dialect='excel')
         wr.writerows(contents)
 
-film_name_list_1 = ["the_death_of_stalin", "isle_of_dogs_2018", "the_leisure_seeker", "ready_player_one"]
-film_name_list_2 = ["final_portrait", "you_were_never_really_here", "avengers_infinity_war", "deadpool_2"]
-film_name_list = film_name_list_1 + film_name_list_2
+
 # film_name_list = ["the_death_of_stalin"]
 director_list = [""]
 i = 0
@@ -139,31 +140,16 @@ for film_name in film_name_list:
     for line in st:
         line = line.strip()
         stopwords.append(line)
+    film_words_to_delete = ['film', 'movie', 'theater', 'show', 'make', 'i', 'im','people', 'see','watch']
     film_name_words = film_name.split("_")
-    words_to_delete = stopwords + film_name_words + 'film' + 'movie' + 'cinema' + 'theater' + 'show' + 'make'
+    words_to_delete = film_words_to_delete + stopwords + film_name_words
     for word in reviews_words:
         if word in words_to_delete:
             reviews_words.remove(word)
-
-        # word.translate(None, string.punctuation)
+    for word in reviews_words:
+        if word in film_words_to_delete:
+            reviews_words.remove(word)
     txt_file = "./DataFile/reviews_film" + str(i) + "_clean" + ".txt"
     get_txt(reviews_words, txt_file)
     i = i + 1
 
-
-
-
-
-
-
-
-# text_from_file_with_apath = open('/film1.txt').read()
-#
-# wordlist_after_jieba = jieba.cut(text_from_file_with_apath, cut_all = True)
-# wl_space_split = " ".join(wordlist_after_jieba)
-#
-# my_wordcloud = WordCloud().generate(wl_space_split)
-#
-# plt.imshow(my_wordcloud)
-# plt.axis("off")
-# plt.show()
