@@ -140,7 +140,7 @@ for film_name in film_name_list:
         line = line.strip()
         stopwords.append(line)
     film_name_words = film_name.split("_")
-    words_to_delete = stopwords + film_name_words
+    words_to_delete = stopwords + film_name_words + 'film' + 'movie' + 'cinema' + 'theater' + 'show' + 'make'
     for word in reviews_words:
         if word in words_to_delete:
             reviews_words.remove(word)
