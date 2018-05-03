@@ -1080,7 +1080,6 @@ a
 gritty
 sticky
 feeling
-id
 worked
 a
 sweat
@@ -1089,7 +1088,6 @@ sandstorm
 walked
 the
 uncertain
-id
 experienced
 it
 led

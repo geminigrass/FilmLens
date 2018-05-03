@@ -112,6 +112,7 @@ director_list = [""]
 i = 0
 # list_reviews_html_str = list()
 for film_name in film_name_list:
+    print(film_name," is saved at ", i)
     txt_file = "film" + str(i) + ".txt"
     page_nums, review_type = get_page_nums(film_name)
     url_base = url_rotten + film_name + "/reviews/?page="

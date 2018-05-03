@@ -744,6 +744,7 @@ keep
 hooked
 gasp
 mcu
+again
 feels
 a
 bait
@@ -860,7 +861,7 @@ kind
 reels
 emotionally
 invested
-ill
+definitely
 watching
 again
 clocking
@@ -912,7 +913,6 @@ review
 spanish
 seeing
 wasnt
-id
 again
 thinking
 a
@@ -1333,6 +1333,7 @@ spanish
 purposefully
 unresolved
 decided
+say
 enjoyed
 watching
 a
@@ -1558,7 +1559,6 @@ action
 mission
 accomplished
 a
-other
 18
 exist
 wed
@@ -1575,7 +1575,6 @@ war
 second
 world
 war
-id
 churchill
 declare
 beginning
@@ -2061,6 +2060,7 @@ needs
 move
 beyond
 climax
+after
 climax
 unremarkable
 repetitive
@@ -2638,7 +2638,6 @@ stay
 human
 accessible
 cant
-be
 extraordinarily
 impressed
 its
@@ -2728,7 +2727,6 @@ being
 all
 the
 things
-it
 needs
 be
 that
@@ -3038,7 +3036,6 @@ buttons
 at
 regular
 intervals
-but
 a
 infinite
 potentialits

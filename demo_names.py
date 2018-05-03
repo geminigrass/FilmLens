@@ -3,6 +3,9 @@ import requests
 import numpy as np
 import csv
 
+def test():
+    print('--------')
+
 # do not modify
 def get_text_from_elements(elements):
     """Uses list comprehension to parse out the cleaned text strings from a list of
