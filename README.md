@@ -3,6 +3,14 @@ python for developers
 
 To see the demo, run: python3 demo.py
 
+Users can interact with program by xxxxx
+
+Please always enter the valid input.
+
+For video demo, please refer to https://youtu.be/QgzSPVFGpNA
+
+
+
 ### Assumptions:
 One big issue in real word situation is that movies can have the same name. 
 
