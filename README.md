@@ -98,6 +98,6 @@ For detailed description, please refer to workbook.xlsx under DataFile folder.
 ### Assumptions:
 One big issue in real word situation is that movies can have the same name. 
 
-To handle this, we simply use RottenTomato's own search and return the first hit. 
+To handle this, we simply use RottenTomato's own search and return the first hit irrespective of the release year. 
 
 The reson why we do this is that Manor Theater doesn't provide the release year of any on-showing movie, and they identify movies by poster instead. In addition, we can not simply return the latest one because Manor sometimes play the former one. These all together makes it impossible for our programe to identify movies according to names. 
