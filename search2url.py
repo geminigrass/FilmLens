@@ -17,11 +17,16 @@ def name2url(str_list):
         search_soup = bs4.BeautifulSoup(search_html, 'html.parser')
 
         div_cfpitem =search_soup.find('div',{"id": "main_container"}).find_all('script')[0].text
-        # print(div_cfpitem)
+        # print(div_cfpitem.__class__)
         result_str = re.search(r'(/m/.*)', div_cfpitem).group(0).split(',')[0].strip('\"').strip("/m/")
 
-        # result_str = re.findall(r'(/m/.*)', div_cfpitem)
+        # div_cfpitem = search_soup.find('div', {"id": "main_container"}).find_all('script')[0].text
+        # print(div_cfpitem.__class__)
+        #
+        # print(div_cfpitem)
+        # result_str = re.findall(r'("year":2018,"url":"/m/.*)', div_cfpitem)
         # print(len(result_str))
+        # print(result_str)
         # break
 
 

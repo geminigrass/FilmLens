@@ -16,7 +16,8 @@ url_rotten = "https://www.rottentomatoes.com/m/"
 # film_name_list_1 = ["avengers_infinity_war", "avengers_infinity_war", "the_death_of_stalin", "final_portrait", "isle_of_dogs_2018"]
 # film_name_list_2 = ["you_were_never_really_here", "tully_2018", "rbg", "deadpool_2"]
 # film_name_list = film_name_list_1 + film_name_list_2
-
+def remove_values_from_list(the_list, val):
+   return [value for value in the_list if value not in val]
 
 # get text from BeautifulSoup selected elements list
 def get_text_from_elements(elements):
@@ -146,18 +147,29 @@ def scrap_from_film_name_list(film_name_list):
         film_words_to_delete = ['film', 'movie', 'theater', 'show', 'make', 'i', 'im','people', 'see','watch']
         film_name_words = film_name.split("_")
         words_to_delete = film_words_to_delete + stopwords + film_name_words
-        for word in reviews_words:
-            if word in words_to_delete:
-                reviews_words.remove(word)
-        for word in reviews_words:
-            if word in film_words_to_delete:
-                reviews_words.remove(word)
+        # print(len(reviews_words))
+
+
+        # for word in reviews_words:
+        #     if word in words_to_delete:
+        #         reviews_words.remove(word)
+        # print(len(reviews_words))
+        # for word in reviews_words:
+        #     if word in film_words_to_delete:
+        #         reviews_words.remove(word)
+        reviews_words = remove_values_from_list(reviews_words,words_to_delete)
+        # print(len(reviews_words))
+
         txt_file = "./DataFile/reviews_film_" + film_name + "_clean" + ".txt"
         get_txt(reviews_words, txt_file)
         i = i + 1
+        # break
+        # # TODO
 
 
-# names = ['avengers_infinity_war', 'isle_of_dogs', 'tully', 'sianspheric-rgb', 'deadpool', 'deadpool_2', 'solo_a_star_wars_story']
-# for name in names:
-#     txt_file = "./DataFile/reviews_film_" + name + "_clean" + ".txt"
-#     print(txt_file)
+
+# names = ['avengers_infinity_war', 'avengers_infinity_war',  'tully', 'sianspheric-rgb', 'deadpool', 'deadpool_2', 'solo_a_star_wars_story']
+# # for name in names:
+# #     txt_file = "./DataFile/reviews_film_" + name + "_clean" + ".txt"
+# #     print(txt_file)
+# scrap_from_film_name_list(names)
