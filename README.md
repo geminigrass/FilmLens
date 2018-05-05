@@ -16,6 +16,7 @@ For video demo, please refer to https://youtu.be/QgzSPVFGpNA
 
 ### Command Line Interface:
 
+Below is the demo in terminal.
 
 ```
 desdeMacBook-Pro:FilmLens des$ python3 demo.py
@@ -80,6 +81,15 @@ desdeMacBook-Pro:FilmLens des$
 ```
 
 ### Data Source:
+
+1.Manor Cinema
+
+2.Rotten Tommato 
+
+3.A file downloaded from the Internet.
+
+For detailed description, please refer to workbook.xlsx under DataFile folder.
+
 
 ### Assumptions:
 One big issue in real word situation is that movies can have the same name. 
