@@ -31,7 +31,7 @@ def main():
 
         print('')
         if not review_scraped:
-            print('Please wait. Programe is scraping reviews from these movies.....')
+            print('Please wait. Programme is scraping reviews from these movies.....')
             scrap_from_film_name_list(film_name_list)
             review_scraped = True
 
