@@ -21,7 +21,7 @@ dict = {
     8:'DataFile/reviews_film8_clean.txt',
 }
 def show_word_cloud(choise):
-    path_file = dict[choise]
+    path_file = choise
     reviews_of_one_film = open(path_file).read()
     wordcloud = WordCloud().generate(reviews_of_one_film)
 
@@ -30,6 +30,7 @@ def show_word_cloud(choise):
     plt.show()
 
 
+# show_word_cloud('./DataFile/reviews_film_isle_of_dogs_clean.txt')
 # def main():
 #     show_word_cloud(2)
 #

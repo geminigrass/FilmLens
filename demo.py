@@ -1,11 +1,13 @@
 import pandas as pd
 import sys
 # print(sys.path)
-sys.path.append('/Users/des/Desktop/95880python')
-from FilmLens.demo_names import *
+# sys.path.append('/Users/des/Desktop/95880python')
+sys.path.append('../')
+
+from FilmLens.cinemal_crawl import *
 from FilmLens.review_word_cloud import *
-
-
+from FilmLens.search2url import *
+from FilmLens.review_scrap import *
 
 
 def main():
@@ -13,8 +15,11 @@ def main():
     url = "http://www.manorpgh.com/"
     html = requests.get(url).content
     soup = bs4.BeautifulSoup(html, 'html.parser')
+    movies_names_clean, movies_showtime_clean, movies_genre_clean = crawl_movies_and_showtime(soup)
+    film_name_list = name2url(movies_names_clean)
 
     using = True
+    review_scraped = False
     while(using):
         print('----------Main Menu--------------------')
         print("Welcone to FilmLens!")
@@ -23,10 +28,15 @@ def main():
         print('')
         print('These movies are showing at Manor Cinema recently:')
 
-        movies_names_clean, movies_showtime_clean, movies_genre_clean = crawl_movies_and_showtime(soup)
         length = len(movies_names_clean)
         for i in range(length):
             print(i, movies_names_clean[i])
+
+        print('')
+        if not review_scraped:
+            print('Please wait. Programe is scraping reviews from these movies.....')
+            scrap_from_film_name_list(film_name_list)
+            review_scraped = True
 
         choise = input('Please enter a number to select a movie:')
         if choise == 'E':
@@ -65,7 +75,8 @@ def main():
                     lines = strr.strip('[]').split(',')
                     for item in lines:
                         print(item.strip())
-                    show_word_cloud(choise)
+                    txt_file_path = "./DataFile/reviews_film_" + film_name_list[choise] + "_clean" + ".txt"
+                    show_word_cloud(txt_file_path)
                     back = input('Press y to go back:')
                     goon = False
                     continue

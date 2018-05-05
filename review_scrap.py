@@ -13,9 +13,9 @@ import csv
 
 
 url_rotten = "https://www.rottentomatoes.com/m/"
-film_name_list_1 = ["avengers_infinity_war", "avengers_infinity_war", "the_death_of_stalin", "final_portrait", "isle_of_dogs_2018"]
-film_name_list_2 = ["you_were_never_really_here", "tully_2018", "rbg", "deadpool_2"]
-film_name_list = film_name_list_1 + film_name_list_2
+# film_name_list_1 = ["avengers_infinity_war", "avengers_infinity_war", "the_death_of_stalin", "final_portrait", "isle_of_dogs_2018"]
+# film_name_list_2 = ["you_were_never_really_here", "tully_2018", "rbg", "deadpool_2"]
+# film_name_list = film_name_list_1 + film_name_list_2
 
 
 # get text from BeautifulSoup selected elements list
@@ -68,11 +68,11 @@ def get_page_nums(film_name):
     else:
         review_type = "critic"
     review_nums_str = get_text_from_elements(review_nums_html)[0]
-    print(review_nums_str)
-    print(type(review_nums_str))
+    # print(review_nums_str)
+    # print(type(review_nums_str))
     page_nums = re.findall(r"\d+",review_nums_str)
     page_nums = int(page_nums[1])
-    print(page_nums)
+    # print(page_nums)
     return page_nums, review_type
 
 # convert from list to txt file
@@ -107,50 +107,57 @@ def save_reviews_raw(reviews_html, txt_file):
         wr.writerows(contents)
 
 
-# film_name_list = ["the_death_of_stalin"]
-director_list = [""]
-i = 0
-# list_reviews_html_str = list()
-for film_name in film_name_list:
-    print(film_name," is saved at ", i)
-    txt_file = "film" + str(i) + ".txt"
-    page_nums, review_type = get_page_nums(film_name)
-    url_base = url_rotten + film_name + "/reviews/?page="
-    reviews_html = get_reviews_from_several_pages(url_base, page_nums, review_type)
-    print("type of reviews_html: ",type(reviews_html))
-    txt_file = "./DataFile/reviews_film" + str(i) + "_raw" + ".csv"
-    save_reviews_raw(reviews_html, txt_file)
-    # reviews_raw = get_list_of_str(reviews_html)
-    # get_txt(reviews_raw, txt_file)
+def scrap_from_film_name_list(film_name_list):
+    # film_name_list = ["the_death_of_stalin"]
+    director_list = [""]
+    i = 0
+    # list_reviews_html_str = list()
+    for film_name in film_name_list:
 
-    reviews_text = get_text_from_elements(reviews_html)
-    # print("type of reviews_text: ", type(reviews_text))
-    # transfer reviews to lower
-    reviews_text = list_to_lower(reviews_text)
-    # get list of words from sentences in reviews list
-    reviews_words = []
-    for sentence in reviews_text:
-        words = sentence.split()
-        reviews_words = reviews_words + words
-    # get  reviews of lower words
-    # get_txt(reviews_words, txt_file)
-    reviews_words = [''.join(c for c in s if c not in string.punctuation) for s in reviews_words]
-    # delete stop words
-    stopwords = []
-    st = codecs.open('stopwords.txt', 'rb',encoding='utf-8')
-    for line in st:
-        line = line.strip()
-        stopwords.append(line)
-    film_words_to_delete = ['film', 'movie', 'theater', 'show', 'make', 'i', 'im','people', 'see','watch']
-    film_name_words = film_name.split("_")
-    words_to_delete = film_words_to_delete + stopwords + film_name_words
-    for word in reviews_words:
-        if word in words_to_delete:
-            reviews_words.remove(word)
-    for word in reviews_words:
-        if word in film_words_to_delete:
-            reviews_words.remove(word)
-    txt_file = "./DataFile/reviews_film" + str(i) + "_clean" + ".txt"
-    get_txt(reviews_words, txt_file)
-    i = i + 1
+        txt_file = "film" + str(i) + ".txt"
+        page_nums, review_type = get_page_nums(film_name)
+        url_base = url_rotten + film_name + "/reviews/?page="
+        reviews_html = get_reviews_from_several_pages(url_base, page_nums, review_type)
+        # print("type of reviews_html: ",type(reviews_html))
+        print('scraping for ', film_name, '...')
+        txt_file = "./DataFile/reviews_film_" + film_name + "_raw" + ".csv"
+        save_reviews_raw(reviews_html, txt_file)
+        # reviews_raw = get_list_of_str(reviews_html)
+        # get_txt(reviews_raw, txt_file)
 
+        reviews_text = get_text_from_elements(reviews_html)
+        # print("type of reviews_text: ", type(reviews_text))
+        # transfer reviews to lower
+        reviews_text = list_to_lower(reviews_text)
+        # get list of words from sentences in reviews list
+        reviews_words = []
+        for sentence in reviews_text:
+            words = sentence.split()
+            reviews_words = reviews_words + words
+        # get  reviews of lower words
+        # get_txt(reviews_words, txt_file)
+        reviews_words = [''.join(c for c in s if c not in string.punctuation) for s in reviews_words]
+        # delete stop words
+        stopwords = []
+        st = codecs.open('stopwords.txt', 'rb',encoding='utf-8')
+        for line in st:
+            line = line.strip()
+            stopwords.append(line)
+        film_words_to_delete = ['film', 'movie', 'theater', 'show', 'make', 'i', 'im','people', 'see','watch']
+        film_name_words = film_name.split("_")
+        words_to_delete = film_words_to_delete + stopwords + film_name_words
+        for word in reviews_words:
+            if word in words_to_delete:
+                reviews_words.remove(word)
+        for word in reviews_words:
+            if word in film_words_to_delete:
+                reviews_words.remove(word)
+        txt_file = "./DataFile/reviews_film_" + film_name + "_clean" + ".txt"
+        get_txt(reviews_words, txt_file)
+        i = i + 1
+
+
+# names = ['avengers_infinity_war', 'isle_of_dogs', 'tully', 'sianspheric-rgb', 'deadpool', 'deadpool_2', 'solo_a_star_wars_story']
+# for name in names:
+#     txt_file = "./DataFile/reviews_film_" + name + "_clean" + ".txt"
+#     print(txt_file)
