@@ -1,42 +1,32 @@
- FilmLens
+# FilmLens
 
 Course: python for developers
 
-
 Users can interact with program by enter valid keyboard input (case sensitive).
+
+
 
 Please always enter the valid input.
 
-For video demo, please refer to https://youtu.be/QgzSPVFGpNA
-
-Data Source:
-Our data comes from
-
-1.Manor Cinema(movies and showing schedule)
-
-2.Rotten Tommato(reviews)
-
-3.A file downloaded from the Internet.(genres and classic movies)
-
-Data files: All data files are put in DataFile folder including:
-	1. classic_movies.csv is a file we download form internet whose content is genres and corresponding movies.
-	2. classic_movies_raw.csv whic shows movies and genres of each movie  is processed from classic_movies.csv. In classic_movies_clean.csv, we only show one genre for each movie.
-	3.reviews_filmx_raw.csv is the html node of reviews scrapped from  rotten tomato website. After clean it by removing  stop word and film names, we get review_filmx_clean.txt.
-	4.merge.csv merges classic_movies_clean.csv and reviews_filmx_clean.txt.
-	5.workbook.xlsx shows all above data files. 
-
+For video demo, please refer to https://youtu.be/QgzSPVFGpNA 
 
 Users can interact with program by enter valid keyboard input (case sensitive).
-Please always enter the valid input.
+
 Steps:
 1. Run python3 demo.py command on your terminal  and you can see a list of films on showing in Manor theater.
+
+```
+python3 demo.py
+```
+
 2. Then it notices you the programme is scrapping reviews from rotten tomato
-2. For about ten seconds, it notices you scrapping is done.
-3. Please enter the index of movie you have interest in and it shows you showing schedule of the movie.
-4. Enter 'y' to continue have a view at word cloud image of the movie, close the figure window and enter 'y' in terminal to go back to list of all movie
 
+3. For about ten seconds, it notices you scrapping is done.
 
-For video demo, please refer to https://youtu.be/QgzSPVFGpNA
+4. Please enter the index of movie you have interest in and it shows you showing schedule of the movie.
+
+5. Enter 'y' to continue have a view at word cloud image of the movie, close the figure window and enter 'y' in terminal to go back to list of all movie
+
 Below is the demo in terminal.
 
 ```
@@ -105,7 +95,32 @@ Below is the word cloud of movie RGB.
 
 ![](rgb_word_cloud.png)
 
-Assumptions:
+### Data Source:
+Our data comes from
+
+1.Manor Cinema(movies and showing schedule)
+
+2.Rotten Tommato(reviews)
+
+3.A file downloaded from the Internet.(genres and classic movies)
+
+Data files: 
+
+All data files are put in DataFile folder including:
+	
+1. classic_movies.csv is a file we download form internet whose content is genres and corresponding movies.
+	
+2. classic_movies_raw.csv whic shows movies and genres of each movie  is processed from classic_movies.csv. In classic_movies_clean.csv, we only show one genre for each movie.
+	
+3.reviews_filmx_raw.csv is the html node of reviews scrapped from  rotten tomato website. After clean it by removing  stop word and film names, we get review_filmx_clean.txt.
+	
+4.merge.csv merges classic_movies_clean.csv and reviews_filmx_clean.txt.
+	
+5.workbook.xlsx shows all above data files.
+
+For detailed description, please refer to workbook under DataFile folder.
+
+### Assumptions:
 One big issue in real word situation is that movies can have the same name. 
 
 To handle this, we simply use RottenTomato's own search and return the first hit irrespective of the release year. 
