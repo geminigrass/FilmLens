@@ -1,6 +1,13 @@
 import pandas as pd
 import csv
 
+
+
+'''
+This file gives recommentations for each movie based on genres.
+'''
+
+
 path_classic_movies = "./DataFile/classic_movies.csv"
 path_cinema_crawl = "./DataFile/cinema_clean.csv"
 path_merge = "./DataFile/merge.csv"

@@ -3,7 +3,13 @@ import requests
 import numpy as np
 import csv
 
-# do not modify
+
+'''
+This file defined several functions that are used for scraping movie name, show time, genre from Manor Cinema
+
+'''
+
+# do not modify, provided by professor
 def get_text_from_elements(elements):
     """Uses list comprehension to parse out the cleaned text strings from a list of
     elements returned from a BeautifulSoup selection.

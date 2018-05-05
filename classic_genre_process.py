@@ -1,7 +1,10 @@
 import pandas as pd
 import csv
 
-
+'''
+This file takes an file(classic_movies_raw.csv) downloaded from the website as an input.
+Then gives genre of each movie by choosing the first genre.
+'''
 
 def save_clean(path):
     df_movies = pd.read_csv(path)

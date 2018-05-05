@@ -5,6 +5,11 @@ import requests
 import re
 
 
+'''
+This file define useful function to search a movie in Rotten Tomatto accoding to movie names.
+It encodes the name infomation within the expression of url using ascii to html5 protocal.
+'''
+
 def name2url(str_list):
     film_name_list = []
     for str_name in str_list:
