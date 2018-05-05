@@ -106,9 +106,9 @@ Data files:
 
 All data files are put in DataFile folder including:
 
-1. classic_movies.csv is a file we download form internet whose content is genres and corresponding movies.
+1.classic_movies.csv is a file we download form internet whose content is genres and corresponding movies.
 
-2. classic_movies_raw.csv whic shows movies and genres of each movie  is processed from classic_movies.csv. In classic_movies_clean.csv, we only show one genre for each movie.
+2.classic_movies_raw.csv whic shows movies and genres of each movie  is processed from classic_movies.csv. In classic_movies_clean.csv, we only show one genre for each movie.
 
 3.reviews_filmx_raw.csv is the html node of reviews scrapped from  rotten tomato website. After clean it by removing  stop word and film names, we get review_filmx_clean.txt.
 	
