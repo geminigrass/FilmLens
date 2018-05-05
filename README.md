@@ -5,7 +5,7 @@ python for developers
 To see the demo, run:
 
 ```
-<p>python3 demo.py</p>
+python3 demo.py
 ```
 
 Users can interact with program by enter valid keyboard input.
