@@ -2,13 +2,82 @@
 
 python for developers
 
-To see the demo, run: python3 demo.py
+To see the demo, run:
 
-Users can interact with program by xxxxx
+```
+<p>python3 demo.py</p>
+```
+
+Users can interact with program by enter valid keyboard input.
 
 Please always enter the valid input.
 
 For video demo, please refer to https://youtu.be/QgzSPVFGpNA
+
+### Command Line Interface:
+
+
+```
+desdeMacBook-Pro:FilmLens des$ python3 demo.py
+----------Main Menu--------------------
+Welcone to FilmLens!
+^_^
+Enter E to exit from FilmLens.
+
+These movies are showing at Manor Cinema recently:
+0 Avengers: Infinity War
+1 Isle of Dogs
+2 Tully
+3 RBG
+4 Deadpool
+5 Deadpool 2
+6 Solo: A Star Wars Story
+
+Please wait. Programe is scraping reviews from these movies.....
+scraping for  avengers_infinity_war ...
+scraping for  isle_of_dogs ...
+scraping for  tully ...
+scraping for  rbg ...
+scraping for  deadpool ...
+scraping for  deadpool_2 ...
+scraping for  solo_a_star_wars_story ...
+Please enter a number to select a movie:3
+--------------Showtime----------------
+Showtime of the movie:  RBG  is
+days:  Fri, Mon - Thu
+date:  5/11, 5/14 - 5/17
+time:  3:10 PM, 5:20, 7:30, 9:40 PM
+
+continue?y/n :y
+-------------Review & Recommendation-----------------
+Genre of the movie:  RBG  is
+Documentary
+ 
+You may also like movies with similar genre:
+'Life Is Sacred (2014)'
+'My Friend Rockefeller (2015)'
+'Author: The JT LeRoy Story (2016)'
+'The Beatles: Eight Days a Week - The Touring Years (2016)'
+"Women of '69
+Unboxed"
+Press y to go back:y
+----------Main Menu--------------------
+Welcone to FilmLens!
+^_^
+Enter E to exit from FilmLens.
+
+These movies are showing at Manor Cinema recently:
+0 Avengers: Infinity War
+1 Isle of Dogs
+2 Tully
+3 RBG
+4 Deadpool
+5 Deadpool 2
+6 Solo: A Star Wars Story
+
+Please enter a number to select a movie:E
+desdeMacBook-Pro:FilmLens des$ 
+```
 
 ### Data Source:
 
