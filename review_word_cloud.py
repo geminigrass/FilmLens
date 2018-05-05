@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
-
+__author__= "Yizhuan Jiang"
 def show_word_cloud(choise):
     path_file = choise
     reviews_of_one_film = open(path_file).read()

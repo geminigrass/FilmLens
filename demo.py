@@ -7,6 +7,13 @@ from FilmLens.review_word_cloud import *
 from FilmLens.search2url import *
 from FilmLens.review_scrap import *
 
+'''
+This file integrate all other python files and functions to give a fully working product demo.
+'''
+
+__author__= "Can Liu"
+
+
 
 def main():
     url = "http://www.manorpgh.com/"

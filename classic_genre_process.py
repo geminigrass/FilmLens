@@ -6,7 +6,16 @@ This file takes an file(classic_movies_raw.csv) downloaded from the website as a
 Then gives genre of each movie by choosing the first genre.
 '''
 
+__author__= "Can Liu"
+
 def save_clean(path):
+    """Read from the raw file that store the classic movies and their genres.
+    In the raw file, each movie has more than one genre,
+    here we simply take the first genre.
+
+    Arguments:
+        path {string} -- path to the raw file.
+    """
     df_movies = pd.read_csv(path)
     length = len(df_movies['genres'])
 
@@ -26,6 +35,12 @@ def save_clean(path):
 
 
 def transpose(path):
+    """Save the clean file needed for Data File submission.
+    Change the row to be genres, and columns to be a list of movies.
+
+    Arguments:
+        path {string} -- path to the raw file.
+    """
     df_clean = pd.read_csv(path)
     grouped_df = df_clean.groupby('genres')
 

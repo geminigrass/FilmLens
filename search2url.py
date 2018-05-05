@@ -8,9 +8,18 @@ import re
 '''
 This file define useful function to search a movie in Rotten Tomatto accoding to movie names.
 It encodes the name infomation within the expression of url using ascii to html5 protocal.
+For example, given the movie name 'Avengers Infinity War',
+it should automantically scrap the website at https://www.rottentomatoes.com/search/?search=Avengers%20Infinity%20War
 '''
+__author__= "Can Liu"
 
 def name2url(str_list):
+    """It give the encoding ascii code for url searching.
+     For example, the return string of 'Avengers Infinity War' is  Avengers%20Infinity%20War
+
+    Arguments:
+        str_list {list} -- list of movie names
+    """
     film_name_list = []
     for str_name in str_list:
         to_search = urllib.parse.quote(str_name, safe='')

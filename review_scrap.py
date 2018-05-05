@@ -11,6 +11,7 @@ import codecs
 import string
 import csv
 
+__author__= "Yizhuan Jiang"
 
 url_rotten = "https://www.rottentomatoes.com/m/"
 def remove_values_from_list(the_list, val):
@@ -69,7 +70,6 @@ def get_page_nums(film_name):
 
 # convert from list to txt file
 def get_txt(reviews_list, txt_file_name):
-    # reviews_text = get_text_from_elements(reviews_html)
     fileObject = open(txt_file_name, 'w')
     for word in reviews_list:
         fileObject.write(word)
@@ -83,16 +83,12 @@ def get_list_of_str(list):
 
 def save_reviews_raw(reviews_html, txt_file):
     # convert to list in order to preserve the order of movies
-    # divs_ns_item = list(soup.find_all("div", class_='ns-item'))
-    # divs_ns_showtime = list(soup.find_all("div", class_='ns-showtime'))
 
     contents = []
-    # contents.append(['names','showtimes'])
     num = len(reviews_html)
     for i in range(num):
         l = []
         l.append(str(reviews_html))
-        # l.append(str(divs_ns_showtime[i]))
         contents.append(l)
     with open(txt_file, 'w') as resultFile:
         wr = csv.writer(resultFile, dialect='excel')
@@ -100,10 +96,8 @@ def save_reviews_raw(reviews_html, txt_file):
 
 
 def scrap_from_film_name_list(film_name_list):
-    # film_name_list = ["the_death_of_stalin"]
     director_list = [""]
     i = 0
-    # list_reviews_html_str = list()
     for film_name in film_name_list:
 
         txt_file = "film" + str(i) + ".txt"
@@ -113,8 +107,6 @@ def scrap_from_film_name_list(film_name_list):
         print('scraping for ', film_name, '...')
         txt_file = "./DataFile/reviews_film_" + film_name + "_raw" + ".csv"
         save_reviews_raw(reviews_html, txt_file)
-        # reviews_raw = get_list_of_str(reviews_html)
-        # get_txt(reviews_raw, txt_file)
 
         reviews_text = get_text_from_elements(reviews_html)
         # transfer reviews to lower
@@ -125,7 +117,6 @@ def scrap_from_film_name_list(film_name_list):
             words = sentence.split()
             reviews_words = reviews_words + words
         # get  reviews of lower words
-        # get_txt(reviews_words, txt_file)
         reviews_words = [''.join(c for c in s if c not in string.punctuation) for s in reviews_words]
         # delete stop words
         stopwords = []
