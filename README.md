@@ -12,7 +12,7 @@ For video demo, please refer to https://youtu.be/QgzSPVFGpNA
 
 Users can interact with program by enter valid keyboard input (case sensitive).
 
-Steps:
+### Steps:
 1. Run python3 demo.py command on your terminal  and you can see a list of films on showing in Manor theater.
 
 ```
