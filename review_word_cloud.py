@@ -9,17 +9,17 @@ from wordcloud import WordCloud
 # plt.axis("off")
 # plt.show()
 
-dict = {
-    0:'DataFile/reviews_film0_clean.txt',
-    1:'DataFile/reviews_film1_clean.txt',
-    2:'DataFile/reviews_film2_clean.txt',
-    3:'DataFile/reviews_film3_clean.txt',
-    4:'DataFile/reviews_film4_clean.txt',
-    5:'DataFile/reviews_film5_clean.txt',
-    6:'DataFile/reviews_film6_clean.txt',
-    7:'DataFile/reviews_film7_clean.txt',
-    8:'DataFile/reviews_film8_clean.txt',
-}
+# dict = {
+#     0:'DataFile/reviews_film0_clean.txt',
+#     1:'DataFile/reviews_film1_clean.txt',
+#     2:'DataFile/reviews_film2_clean.txt',
+#     3:'DataFile/reviews_film3_clean.txt',
+#     4:'DataFile/reviews_film4_clean.txt',
+#     5:'DataFile/reviews_film5_clean.txt',
+#     6:'DataFile/reviews_film6_clean.txt',
+#     7:'DataFile/reviews_film7_clean.txt',
+#     8:'DataFile/reviews_film8_clean.txt',
+# }
 def show_word_cloud(choise):
     path_file = choise
     reviews_of_one_film = open(path_file).read()
