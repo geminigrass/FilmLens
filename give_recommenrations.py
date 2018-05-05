@@ -7,7 +7,6 @@ path_merge = "./DataFile/merge.csv"
 df_classic_movies = pd.read_csv(path_classic_movies)
 genres_list = list(df_classic_movies.genre)
 
-
 with open(path_cinema_crawl,'r') as csvinput:
     with open(path_merge, 'w') as csvoutput:
         writer = csv.writer(csvoutput, lineterminator='\n')

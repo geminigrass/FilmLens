@@ -95,6 +95,7 @@ def main():
     html = requests.get(url).content
     soup = bs4.BeautifulSoup(html, 'html.parser')
 
+    # This line is used for handin data file
     # save_cinema_raw(soup)
 
     movies_names_clean,movies_showtime_clean,movies_genre_clean = crawl_movies_and_showtime(soup)

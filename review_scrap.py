@@ -13,15 +13,13 @@ import csv
 
 
 url_rotten = "https://www.rottentomatoes.com/m/"
-# film_name_list_1 = ["avengers_infinity_war", "avengers_infinity_war", "the_death_of_stalin", "final_portrait", "isle_of_dogs_2018"]
-# film_name_list_2 = ["you_were_never_really_here", "tully_2018", "rbg", "deadpool_2"]
-# film_name_list = film_name_list_1 + film_name_list_2
 def remove_values_from_list(the_list, val):
    return [value for value in the_list if value not in val]
 
 # get text from BeautifulSoup selected elements list
 def get_text_from_elements(elements):
     return [e.text.strip() for e in elements]
+
 # get reviews from one pge
 def get_reviews_from_one_page(url, review_type):
     page = requests.get(url)
@@ -31,6 +29,7 @@ def get_reviews_from_one_page(url, review_type):
     else:
         reviews_html = soup.select('.the_review')
     return reviews_html
+
 # get all reviews of first n pages
 def get_reviews_from_several_pages(url_base, page_nums, review_type):
     i = 0
@@ -48,32 +47,24 @@ def get_reviews_from_several_pages(url_base, page_nums, review_type):
         i = i + 1
     return reviews_html
 
-
-
 # get total number of page of reviews
 def get_page_nums(film_name):
     url_first_page = url_rotten + film_name + "/reviews/"
     page = requests.get(url_first_page)
     soup = BeautifulSoup(page.content, "html.parser")
     review_nums_html = soup.select('.pageInfo')
-    # print(type(review_nums_html))
-    # print(review_nums_html)
-    # print(len(review_nums_html))
+
     if len(review_nums_html) == 0:
         url_first_page = url_rotten + film_name + "/reviews/?type=user"
         page = requests.get(url_first_page)
         soup = BeautifulSoup(page.content, "html.parser")
         review_nums_html = soup.select('.pageInfo')
-        # print(review_nums_html)
         review_type = "audience"
     else:
         review_type = "critic"
     review_nums_str = get_text_from_elements(review_nums_html)[0]
-    # print(review_nums_str)
-    # print(type(review_nums_str))
     page_nums = re.findall(r"\d+",review_nums_str)
     page_nums = int(page_nums[1])
-    # print(page_nums)
     return page_nums, review_type
 
 # convert from list to txt file
@@ -119,7 +110,6 @@ def scrap_from_film_name_list(film_name_list):
         page_nums, review_type = get_page_nums(film_name)
         url_base = url_rotten + film_name + "/reviews/?page="
         reviews_html = get_reviews_from_several_pages(url_base, page_nums, review_type)
-        # print("type of reviews_html: ",type(reviews_html))
         print('scraping for ', film_name, '...')
         txt_file = "./DataFile/reviews_film_" + film_name + "_raw" + ".csv"
         save_reviews_raw(reviews_html, txt_file)
@@ -127,7 +117,6 @@ def scrap_from_film_name_list(film_name_list):
         # get_txt(reviews_raw, txt_file)
 
         reviews_text = get_text_from_elements(reviews_html)
-        # print("type of reviews_text: ", type(reviews_text))
         # transfer reviews to lower
         reviews_text = list_to_lower(reviews_text)
         # get list of words from sentences in reviews list
@@ -147,29 +136,9 @@ def scrap_from_film_name_list(film_name_list):
         film_words_to_delete = ['film', 'movie', 'theater', 'show', 'make', 'i', 'im','people', 'see','watch']
         film_name_words = film_name.split("_")
         words_to_delete = film_words_to_delete + stopwords + film_name_words
-        # print(len(reviews_words))
 
-
-        # for word in reviews_words:
-        #     if word in words_to_delete:
-        #         reviews_words.remove(word)
-        # print(len(reviews_words))
-        # for word in reviews_words:
-        #     if word in film_words_to_delete:
-        #         reviews_words.remove(word)
         reviews_words = remove_values_from_list(reviews_words,words_to_delete)
-        # print(len(reviews_words))
 
         txt_file = "./DataFile/reviews_film_" + film_name + "_clean" + ".txt"
         get_txt(reviews_words, txt_file)
         i = i + 1
-        # break
-        # # TODO
-
-
-
-# names = ['avengers_infinity_war', 'avengers_infinity_war',  'tully', 'sianspheric-rgb', 'deadpool', 'deadpool_2', 'solo_a_star_wars_story']
-# # for name in names:
-# #     txt_file = "./DataFile/reviews_film_" + name + "_clean" + ".txt"
-# #     print(txt_file)
-# scrap_from_film_name_list(names)

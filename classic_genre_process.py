@@ -23,10 +23,8 @@ def save_clean(path):
 
 
 def transpose(path):
-    # path = "./DataFile/classic_movies_clean.csv"# TODO:
     df_clean = pd.read_csv(path)
     grouped_df = df_clean.groupby('genres')
-
 
     content = []
     content.append(['genre','recommendations'])
@@ -46,7 +44,6 @@ def main():
     raw_path = "./DataFile/classic_movies_raw.csv"
     clean_path = save_clean(raw_path)
     processed_path = transpose(clean_path)
-    # processed_path = transpose("")#TODO
 
 
 if __name__ == '__main__':

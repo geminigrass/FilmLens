@@ -1,7 +1,5 @@
 import pandas as pd
 import sys
-# print(sys.path)
-# sys.path.append('/Users/des/Desktop/95880python')
 sys.path.append('../')
 
 from FilmLens.cinemal_crawl import *
@@ -11,7 +9,6 @@ from FilmLens.review_scrap import *
 
 
 def main():
-
     url = "http://www.manorpgh.com/"
     html = requests.get(url).content
     soup = bs4.BeautifulSoup(html, 'html.parser')
@@ -80,7 +77,6 @@ def main():
                     back = input('Press y to go back:')
                     goon = False
                     continue
-
 
 
 if __name__ == "__main__":
