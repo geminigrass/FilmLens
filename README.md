@@ -8,7 +8,7 @@ To see the demo, run:
 python3 demo.py
 ```
 
-Users can interact with program by enter valid keyboard input.
+Users can interact with program by enter valid keyboard input (case sensitive).
 
 Please always enter the valid input.
 
@@ -79,6 +79,10 @@ These movies are showing at Manor Cinema recently:
 Please enter a number to select a movie:E
 desdeMacBook-Pro:FilmLens des$ 
 ```
+### Word Cloud:
+Below is the word cloud of movie RGB.
+
+![](rgb_word_cloud.png)
 
 ### Data Source:
 
