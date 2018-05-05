@@ -11,7 +11,7 @@ from FilmLens.review_scrap import *
 This file integrate all other python files and functions to give a fully working product demo.
 '''
 
-__author__      = "Can Liu"
+__author__= "Can Liu"
 
 
 

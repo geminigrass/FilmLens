@@ -11,6 +11,7 @@ import codecs
 import string
 import csv
 
+__author__= "Yizhuan Jiang"
 
 url_rotten = "https://www.rottentomatoes.com/m/"
 def remove_values_from_list(the_list, val):

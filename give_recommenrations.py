@@ -9,7 +9,7 @@ It's for handin of Data File submission.
 Unlike demo.py is executed every time the product runs,
 this file only needs to be executed once to get the cinema_clean.csv file.
 '''
-__author__      = "Can Liu"
+__author__= "Can Liu"
 
 path_classic_movies = "./DataFile/classic_movies.csv"
 path_cinema_crawl = "./DataFile/cinema_clean.csv"

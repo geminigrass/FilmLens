@@ -6,7 +6,7 @@ This file takes an file(classic_movies_raw.csv) downloaded from the website as a
 Then gives genre of each movie by choosing the first genre.
 '''
 
-__author__      = "Can Liu"
+__author__= "Can Liu"
 
 def save_clean(path):
     """Read from the raw file that store the classic movies and their genres.

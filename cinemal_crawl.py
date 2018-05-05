@@ -9,7 +9,7 @@ This file defined several functions that are used for scraping movie name, show 
 
 '''
 
-__author__      = "Can Liu"
+__author__= "Can Liu"
 
 # do not modify, provided by professor Brain
 def get_text_from_elements(elements):

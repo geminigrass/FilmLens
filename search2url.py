@@ -11,7 +11,7 @@ It encodes the name infomation within the expression of url using ascii to html5
 For example, given the movie name 'Avengers Infinity War',
 it should automantically scrap the website at https://www.rottentomatoes.com/search/?search=Avengers%20Infinity%20War
 '''
-__author__      = "Can Liu"
+__author__= "Can Liu"
 
 def name2url(str_list):
     """It give the encoding ascii code for url searching.
