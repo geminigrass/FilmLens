@@ -1,9 +1,9 @@
-### FilmLens
+# FilmLens
 python for developers
 
 To see the demo, run: python3 demo.py
 
-# Assumptions:
+### Assumptions:
 One big issue in real word situation is that movies can have the same name. 
 
 To handle this, we simply use RottenTomato's own search and return the first hit. 
